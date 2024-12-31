@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22222211"
+    tools:context=".presentation.play.PlayActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@color/white"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginTop="32dp" />
+
+            <LinearLayout
+                android:id="@+id/horizontalButtonLayout"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="64dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/leftButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_arrow_left_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/rotateButton"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_rotate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/rightButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/baseline_arrow_right_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/horizontalButtonLayout"
+                android:id="@+id/downButton"
+                android:layout_marginHorizontal="24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="4dp">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_arrow_drop_down_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>
